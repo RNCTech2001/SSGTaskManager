@@ -1,23 +1,62 @@
 ﻿body {
-
 }
 
-.testbutton {
-    font-family: arial;
-    font-weight: bold;
-    color: #1F1F1F !important;
-    font-size: 15px;
-    text-shadow: 0px 0px 0px #030200;
-    box-shadow: 1px 1px 1px #F1BA25;
-    padding: 10px 25px;
-    border-radius: 4px;
-    border: 1px outset #000000;
-    background: #F1BA25;
-    background: linear-gradient(to top, #F1BA25, #FFE32B);
+.editbutton {
+  font-family: arial;
+  font-weight: bold;
+  color: #1f1f1f !important;
+  font-size: 15px;
+  text-shadow: 0px 0px 0px #030200;
+  box-shadow: 1px 1px 1px #f1ba25;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: 1px outset #000000;
+  background: #f1ba25;
+  background: linear-gradient(to top, #f1ba25, #ffe32b);
 }
 
-    .testbutton:hover {
-        color: #000000 !important;
-        background: #F1BA25;
-        background: linear-gradient(to top, #F1BA25, #F1BA25);
-    }
+.editbutton:hover {
+  color: #000000 !important;
+  background: #f1ba25;
+  background: linear-gradient(to top, #f1ba25, #f1ba25);
+}
+
+.detailbutton {
+  font-family: arial;
+  font-weight: bold;
+  color: #1f1f1f !important;
+  font-size: 15px;
+  text-shadow: 0px 0px 0px #030200;
+  box-shadow: 1px 1px 1px #f1ba25;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: 1px outset #000000;
+  background: #f1ba25;
+  background: linear-gradient(to top, #f1ba25, #ffe32b);
+}
+
+.detailbutton:hover {
+  color: #000000 !important;
+  background: #f1ba25;
+  background: linear-gradient(to top, #f1ba25, #f1ba25);
+}
+
+.deletebutton {
+  font-family: arial;
+  font-weight: bold;
+  color: #1f1f1f !important;
+  font-size: 15px;
+  text-shadow: 0px 0px 0px #030200;
+  box-shadow: 1px 1px 1px #383838;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: 1px outset #000000;
+  background: #383838;
+  background: linear-gradient(to top, #ff2a2a, #ff4e4e);
+}
+
+   .deletebutton:hover {
+  color: #000000 !important;
+  background: #ff1c1c;
+  background: linear-gradient(to top, #ce2222, #aa3535);
+}
