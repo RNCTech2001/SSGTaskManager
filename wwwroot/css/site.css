@@ -16,6 +16,10 @@ html {
   position: relative;
   min-height: 100%;
 }
+.tablecenter {
+    text-align: center;
+    table-layout:auto ;
+}
 
 body {
   margin-bottom: 60px;

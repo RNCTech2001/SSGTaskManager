@@ -21,7 +21,7 @@
   background: linear-gradient(to top, #f1ba25, #f1ba25);
 }
 
-.detailbutton {
+.detailsbutton {
   font-family: arial;
   font-weight: bold;
   color: #1f1f1f !important;
@@ -35,7 +35,7 @@
   background: linear-gradient(to top, #f1ba25, #ffe32b);
 }
 
-.detailbutton:hover {
+.detailsbutton:hover {
   color: #000000 !important;
   background: #f1ba25;
   background: linear-gradient(to top, #f1ba25, #f1ba25);

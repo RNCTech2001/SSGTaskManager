@@ -13,7 +13,47 @@
 <p>
     <a asp-action="Create">Create Listing</a>
 </p>
-<table class="table">
+<style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 100%px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+            .styled-table thead tr {
+                background-color: #f1ba25;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .styled-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .styled-table tbody tr:last-of-type {
+                    border-bottom: 2px solid #f1ba25;
+                }
+
+                .styled-table tbody tr.active-row {
+                    font-weight: bold;
+                    color: #f1ba25;
+                }
+
+</style>
+    
+<table class="styled-table">
     <thead>
         <tr>
             <th>
@@ -41,13 +81,13 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                        <button class="testbutton">
+                        <button class="editbutton">
                             <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                             </button>
-                        <button class="testbutton">
+                        <button class="detailsbutton">
                             <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                              </button>
-                        <button class="testbutton">
+                        <button class="deletebutton">
                             <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                         </button>
             </td>
