@@ -9,6 +9,7 @@
 <div>
     <h4>ETC_Inventory</h4>
     <hr />
+    <link rel="stylesheet" type="text/css" href="~/css/buttons.css" />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Item)
@@ -31,6 +32,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id"><button class="yellowbutton">Edit</button></a> |
+    <a asp-action="Index"><button class="yellow button">Back to List</button></a>
 </div>

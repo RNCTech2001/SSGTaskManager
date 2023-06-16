@@ -11,7 +11,9 @@
 <body>
     <link rel="stylesheet" type="text/css" href="~/css/buttons.css" />
 <p>
-    <a asp-action="Create">Create Listing</a>
+        <a asp-action="Create">
+            <button class="editbutton">Register Item</button>
+            </a>
 </p>
 
 <style>
@@ -25,7 +27,7 @@
         }
 
             table.styled-table td, table.styled-table th {
-                border: 1px solid #D0D0D0;
+                border: 1px solid #474747;
                 padding: 6px 10px;
             }
 
@@ -39,10 +41,10 @@
             }
 
             table.styled-table thead {
-                background: #F1BA25;
-                background: -moz-linear-gradient(top, #f4cb5b 0%, #f2c13a 66%, #F1BA25 100%);
-                background: -webkit-linear-gradient(top, #f4cb5b 0%, #f2c13a 66%, #F1BA25 100%);
-                background: linear-gradient(to bottom, #f4cb5b 0%, #f2c13a 66%, #F1BA25 100%);
+                background: #FFC527;
+                background: -moz-linear-gradient(top, #ffd35d 0%, #ffca3c 66%, #FFC527 100%);
+                background: -webkit-linear-gradient(top, #ffd35d 0%, #ffca3c 66%, #FFC527 100%);
+                background: linear-gradient(to bottom, #ffd35d 0%, #ffca3c 66%, #FFC527 100%);
             }
 
                 table.styled-table thead th {
@@ -103,15 +105,20 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                        <button class="editbutton">
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            </button>
-                        <button class="detailsbutton">
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                             </button>
-                        <button class="deletebutton">
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        </button>
+                      
+                        <a asp-action="Edit" asp-route-id="@item.Id">
+                            <button class="editbutton">Edit</button>
+                            </a>
+
+
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <button class="detailsbutton">Details </button>
+                            </a>
+
+                        <a asp-action="Delete" asp-route-id="@item.Id">
+                            <button class="deletebutton">Delete</button>
+                            </a>
+                     
             </td>
         </tr>
 }

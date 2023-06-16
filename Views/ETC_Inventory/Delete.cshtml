@@ -10,6 +10,7 @@
 <div>
     <h4>ETC_Inventory</h4>
     <hr />
+    <link rel="stylesheet" type="text/css" href="~/css/buttons.css" />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Item)
@@ -33,7 +34,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="deletebutton" /> |
+        <a asp-action="Index"><button class="yellowbutton">Back to List</button></a>
     </form>
 </div>
