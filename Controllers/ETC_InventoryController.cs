@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,20 @@ namespace SSGTaskManager.Controllers
                           Problem("Entity set 'ApplicationDbContext.ETC_Inventory'  is null.");
         }
 
-        // GET: ETC_Inventory/Details/5
+        public async Task<IActionResult> FormShow()
+        {
+            return View();
+        }
+
+        // GET: Inventory/FormResult
+        public async Task<IActionResult> FormResult(String FindItem)
+        {
+            return View("Index", await _context.ETC_Inventory.Where(j => j.Item.Contains(FindItem)).ToListAsync());
+        }
+
+
+        // GET: ETC_Inventory/Details/5\
+        
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.ETC_Inventory == null)
@@ -46,6 +60,7 @@ namespace SSGTaskManager.Controllers
         }
 
         // GET: ETC_Inventory/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +69,7 @@ namespace SSGTaskManager.Controllers
         // POST: ETC_Inventory/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Item,Date,Name")] ETC_Inventory eTC_Inventory)
@@ -68,6 +84,7 @@ namespace SSGTaskManager.Controllers
         }
 
         // GET: ETC_Inventory/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.ETC_Inventory == null)
@@ -86,6 +103,7 @@ namespace SSGTaskManager.Controllers
         // POST: ETC_Inventory/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Item,Date,Name")] ETC_Inventory eTC_Inventory)
@@ -119,6 +137,7 @@ namespace SSGTaskManager.Controllers
         }
 
         // GET: ETC_Inventory/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.ETC_Inventory == null)
@@ -137,6 +156,7 @@ namespace SSGTaskManager.Controllers
         }
 
         // POST: ETC_Inventory/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
